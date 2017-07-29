@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import * as firebase from 'firebase';
 import {browserHistory} from 'react-router';
 import NavBar from '../../components/navBar/navBar';
-import DashBoard from '../../components/dashBoard/dashBoard';
 
 // import Paper from 'material-ui/Paper';
 // import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -58,8 +57,6 @@ class SignUp extends Component {
   render() {
     return (
       <div>
-          {/*<NavBar />*/}
-    {/*style = {{ display :  ( <DashBoard typeOfUser={this.state.user} />  ?  'none' : 'block') }}*/}
          <center> <h1>SignUp</h1> </center>
      <div className="container">
         <form onSubmit={this.SignUp.bind(this)}>

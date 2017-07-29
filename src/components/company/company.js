@@ -2,20 +2,22 @@ import React, { Component } from 'react';
 import * as firebase from 'firebase';
 import {Link,browserHistory} from 'react-router';
 import NavBarSignOut from '../navBar/navBarSignOut';
-import AllJobs from '../jobs list/allJobs';
+import PostJob from '../jobs list/postJob';
 
 class Company extends Component {
-componentWillMount(){
-          
-      }
   render() {
       return(
+          firebase.auth().currentUser ? (
       <div>
           <NavBarSignOut />
         <center><h1>Company Panel</h1></center>
-        <AllJobs />
-        <Link to="viewStudent">View Student</Link>
+        <Link to="viewStudent">View Student</Link><br />
+         {/* <Link to="viewjobsbycompany">All Jobs</Link><br /> */}
+        <Link to="postjob">Post Job</Link><br />          
+        <Link to="myjobs">My Posted Jobs</Link><br />
+        
       </div>
+          ) : (<div>{browserHistory.push("login")}</div>)
       );
   }
 }

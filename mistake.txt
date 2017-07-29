@@ -1,7 +1,0 @@
-i1) signup krty waqt radio button pe by default dashboard pe ja rha hai jb ye ghlt kam hy
-
-i2) post job krty waqt firebase sahi kamm nhi kr rha
-
-
-i3) condition kesy lgygi ke direct url se component na kholy agr signin na ho tw
-

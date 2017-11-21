@@ -15,31 +15,6 @@ Requirements
 
 
 
-sir zeeshan app
-https://campus-recruitment-syste-9c396.firebaseapp.com/signin
-
-
-material ui
-http://www.material-ui.com/#/get-started/usage
-
-firebase web
-https://firebase.google.com/docs/auth/web/start
-
-
- job : [...this.state.job ,jobData]// ye line kia kr rhi ha?
-
-
-//ye loop problem kia kr rha ha? 
-for(let key in obj){// ye loop hum object ko iterate krany ke lye use krty hain
-            if(obj[key].typeOfUser.toLowerCase() === 'company'){
-                companiesObj[key] = obj[key]; //
-            }
-              else if(obj[key].typeOfUser.toLowerCase() === 'student'){
-                studentObj[key] = obj[key];
-              }
-          }
-
-
 
 
 

@@ -9,7 +9,7 @@ class SignIn extends Component {
   constructor() {
     super();
     this.state = {
-      error: false,
+      error: null,
     }
     this.SignIn = this.SignIn.bind(this);
   }
@@ -27,7 +27,7 @@ class SignIn extends Component {
         var username = snapshot.val().typeOfUser;
         console.log(username);
         this.setState({
-          error: false,
+          error: null,
         })
         if (username === "student") {
           browserHistory.push('student');

@@ -37,30 +37,37 @@ firebase.initializeApp(config);
 class Routes extends Component {
     render() {
         return (
-            <Router history={browserHistory}>
-                <Route path="/" component={NavBar}>
-                    <IndexRoute component={Main} />
-                    <Route path="login" component={SignIn} />
-                    <Route path="signup" component={SignUp} />  
+            <div style={
+                {
+                    background: '#eee',
+                    minHeight: 1000
+                }
+            }>
+                <Router history={browserHistory}>
+                    <Route path="/" component={NavBar}>
+                        <IndexRoute component={Main} />
+                        <Route path="login" component={SignIn} />
+                        <Route path="signup" component={SignUp} />
                     </Route >
-                       <Route path="student" component={Student} />
-                       <Route path="company" component={Company} />  
-                       <Route path="admin" component={Admin} /> 
-                       <Route path="postjob" component={PostJob} />  
-                       <Route path="viewjobs" component={ViewJob} />  
-                       <Route path="viewcompany" component={ViewCompany} />
-                       <Route path="createcv" component={CreateCV} />                       
-                       <Route path="viewStudent" component={ViewStudent} />                       
-                        <Route path="viewjobsbycompany" component={ViewJobByCompany} />    
-                         {/* viewjobsbycompany admin ke lye use hoga                    */}
-                       <Route path="myjobs" component={MyJobs} />                       
-                       <Route path="myProfile" component={MyProfile} />                       
-                        <Route path="cv" component={Candidiate} />     
-                        <Route path="viewdelstd" component={ViewDeleteStudent} />                                               
-                        <Route path="viewdelcmp" component={ViewDeleteCompany} />                                               
-                                                                  
-                                 
-            </Router>
+                    <Route path="student" component={Student} />
+                    <Route path="company" component={Company} />
+                    <Route path="admin" component={Admin} />
+                    <Route path="postjob" component={PostJob} />
+                    <Route path="viewjobs" component={ViewJob} />
+                    <Route path="viewcompany" component={ViewCompany} />
+                    <Route path="createcv" component={CreateCV} />
+                    <Route path="viewStudent" component={ViewStudent} />
+                    <Route path="viewjobsbycompany" component={ViewJobByCompany} />
+                    {/* viewjobsbycompany admin ke lye use hoga                    */}
+                    <Route path="myjobs" component={MyJobs} />
+                    <Route path="myProfile" component={MyProfile} />
+                    <Route path="cv" component={Candidiate} />
+                    <Route path="viewdelstd" component={ViewDeleteStudent} />
+                    <Route path="viewdelcmp" component={ViewDeleteCompany} />
+
+
+                </Router>
+            </div>
         );
     }
 }

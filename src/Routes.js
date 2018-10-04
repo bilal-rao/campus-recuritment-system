@@ -19,7 +19,7 @@ import MyProfile from './components/student/myProfile';
 import Candidiate from './components/student/interestedStudent';
 import ViewDeleteCompany from './components/admin/view-del-cmp';
 import ViewDeleteStudent from './components/admin/view-del-std';
-
+import Home from './components/home';
 
 
 // Initialize Firebase
@@ -45,7 +45,7 @@ class Routes extends Component {
             }>
                 <Router history={browserHistory}>
                     <Route path="/" component={NavBar}>
-                        <IndexRoute component={Main} />
+                        <IndexRoute component={Home} />
                         <Route path="login" component={SignIn} />
                         <Route path="signup" component={SignUp} />
                     </Route >

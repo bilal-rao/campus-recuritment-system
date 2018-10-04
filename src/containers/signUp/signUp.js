@@ -1,21 +1,6 @@
 import React, { Component } from 'react';
 import * as firebase from 'firebase';
 import { browserHistory } from 'react-router';
-import NavBar from '../../components/navBar/navBar';
-
-// import Paper from 'material-ui/Paper';
-// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-// import TextField from 'material-ui/TextField';
-
-
-// const style = {
-//   height: 250,
-//   width: 500,
-//   margin: 20,
-//   textAlign: 'center',
-//   display: 'inline-block',
-// };
-
 
 class SignUp extends Component {
     constructor() {
@@ -35,7 +20,6 @@ class SignUp extends Component {
         console.log(password);
         const auth = firebase.auth();
         auth.createUserWithEmailAndPassword(email, password).catch((error) => {
-            //    alert(error);
             this.setState({ error: error.message })
         }).then(() => {
             firebase.auth().currentUser.updateProfile({
@@ -48,8 +32,6 @@ class SignUp extends Component {
                 uPassword: password,
                 typeOfUser: this.state.user
             });
-
-            // this.props.handlstate(this.state.user)
         });
 
     }
@@ -84,21 +66,7 @@ class SignUp extends Component {
                             <label><input type="radio" value="company" name="user" />Company</label> <br />
 
                         </div>
-                        {/*<MuiThemeProvider>
-              <Paper 
-              style={style} 
-              zDepth={3} 
-              rounded={false} 
-              />
-                <TextField
-                 floatingLabelText="Email"
-                 ref="email"
-              />
-               <TextField
-                 floatingLabelText="Password"
-                 ref="password"
-              />
-              </MuiThemeProvider>*/}
+
                     </form>
                 </div>
             </div>

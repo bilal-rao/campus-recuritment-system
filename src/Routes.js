@@ -20,18 +20,11 @@ import Candidiate from './components/student/interestedStudent';
 import ViewDeleteCompany from './components/admin/view-del-cmp';
 import ViewDeleteStudent from './components/admin/view-del-std';
 import Home from './components/home';
+import firebaseConfig from './firebaseConfig';
 
 
 // Initialize Firebase
-var config = {
-    apiKey: "AIzaSyBaPugtcxCkKS8ODLx5tAavx3h6DHCEYtY",
-    authDomain: "campus-recuirtment-system.firebaseapp.com",
-    databaseURL: "https://campus-recuirtment-system.firebaseio.com",
-    projectId: "campus-recuirtment-system",
-    storageBucket: "",
-    messagingSenderId: "743601707256"
-};
-firebase.initializeApp(config);
+firebase.initializeApp(firebaseConfig);
 
 
 class Routes extends Component {

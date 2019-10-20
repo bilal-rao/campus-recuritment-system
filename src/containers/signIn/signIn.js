@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import * as firebase from 'firebase';
 import { browserHistory, Link } from 'react-router';
-import NavBar from '../../components/navBar/navBar';
-
-
 
 class SignIn extends Component {
   constructor() {
@@ -41,14 +38,11 @@ class SignIn extends Component {
       });
     }).catch((error) => {
       // Handle Errors here.
-      // alert(error);
       console.log("error", error)
       this.setState({
         error: error.message,
       })
-      // ...
     });
-    //  var user = firebase.auth().currentUser;
   }
   render() {
     return (
